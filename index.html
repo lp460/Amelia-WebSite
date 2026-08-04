@@ -1,0 +1,186 @@
+<!DOCTYPE html><html lang="fr"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Amelia — La dictée locale pour macOS</title><meta name="description" content="Transformez votre voix en texte partout sur votre Mac. Rapide, privée et 100 % locale grâce à Whisper et Apple Silicon."/><link rel="shortcut icon" href="/favicon.svg"/><link rel="icon" href="/favicon.svg"/>
+
+
+
+
+
+
+
+
+
+
+
+<style data-vinext-fonts>/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/assets/_vinext_fonts/geist-8ac0455e797f/geist-ff2310f5.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/assets/_vinext_fonts/geist-8ac0455e797f/geist-875ccdd4.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/assets/_vinext_fonts/geist-8ac0455e797f/geist-52306abf.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/assets/_vinext_fonts/geist-8ac0455e797f/geist-001175b1.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/assets/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+.__font_geist_0tvmz3h { font-family: 'Geist', sans-serif; }
+
+.__variable_geist_0tvmz3h { --font-geist-sans: 'Geist', sans-serif; }
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/assets/_vinext_fonts/geist-mono-00e989178794/geist-mono-f6b33328.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/assets/_vinext_fonts/geist-mono-00e989178794/geist-mono-44e03052.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* symbols2 */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/assets/_vinext_fonts/geist-mono-00e989178794/geist-mono-0638449e.woff2) format('woff2');
+  unicode-range: U+2000-2001, U+2004-2008, U+200A, U+23B8-23BD, U+2500-259F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/assets/_vinext_fonts/geist-mono-00e989178794/geist-mono-971fb274.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/assets/_vinext_fonts/geist-mono-00e989178794/geist-mono-44745446.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/assets/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+.__font_geist_mono_1diim1n { font-family: 'Geist Mono', sans-serif; }
+
+.__variable_geist_mono_1diim1n { --font-geist-mono: 'Geist Mono', sans-serif; }
+</style>
+<style>
+
+:root{--paper:#fbfbfa;--white:#fff;--ink:#15171a;--body:#555b64;--muted:#858b94;--line:#e6e6e3;--surface:#f2f2ef;--violet:#6956d9;--violet-2:#8f7cf0;--violet-soft:#eeebff;--green:#4ca67a;--shadow:0 24px 70px rgba(27,23,48,.13);--sans:var(--font-geist-sans),-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;--mono:var(--font-geist-mono),"SF Mono",monospace}
+:root[data-theme="dark"]{--paper:#0d0d10;--white:#17171b;--ink:#f4f3f7;--body:#b5b3bc;--muted:#7f7d87;--line:#29282e;--surface:#1c1b20;--violet:#9b8cff;--violet-2:#7966e8;--violet-soft:#26213e;--green:#68c699;--shadow:0 28px 80px rgba(0,0,0,.42)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--body);font-family:var(--sans);line-height:1.55;-webkit-font-smoothing:antialiased}button,a{font:inherit}a{color:inherit;text-decoration:none}.container{width:min(1160px,calc(100% - 48px));margin:auto}
+nav{position:sticky;top:0;z-index:50;border-bottom:1px solid color-mix(in srgb,var(--line) 72%,transparent);background:color-mix(in srgb,var(--paper) 86%,transparent);backdrop-filter:blur(18px) saturate(170%)}.nav-inner{height:68px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:10px;color:var(--ink);font-size:17px;font-weight:650;letter-spacing:-.02em}.brand-mark{width:30px;height:30px;display:grid;place-items:center;border-radius:9px;background:linear-gradient(145deg,var(--violet-2),var(--violet));color:white;box-shadow:0 6px 16px color-mix(in srgb,var(--violet) 28%,transparent)}.nav-links{display:flex;align-items:center;gap:30px;font-size:13.5px;color:var(--muted)}.nav-links a:hover{color:var(--ink)}.nav-actions{display:flex;align-items:center;gap:9px}.theme-btn{width:35px;height:35px;border:1px solid var(--line);background:var(--white);color:var(--ink);border-radius:9px;display:grid;place-items:center;cursor:pointer}.button{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:9px;font-size:14px;font-weight:600;transition:.2s ease;border:1px solid transparent}.button:hover{transform:translateY(-1px)}.button-small{padding:8px 15px}.button-large{padding:13px 19px}.button-primary{background:var(--ink);color:var(--paper);box-shadow:0 5px 16px color-mix(in srgb,var(--ink) 15%,transparent)}.button-ghost{background:var(--white);color:var(--ink);border-color:var(--line)}
+.hero{padding:88px 0 84px;overflow:hidden}.hero-grid{display:grid;grid-template-columns:.94fr 1.06fr;align-items:center;gap:76px}.eyebrow,.kicker{font-size:12px;text-transform:uppercase;letter-spacing:.11em;font-weight:650;color:var(--violet);margin:0 0 18px}.eyebrow{display:inline-flex;align-items:center;gap:9px;background:var(--violet-soft);padding:7px 11px;border-radius:99px;letter-spacing:.04em;text-transform:none}.live-dot{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px color-mix(in srgb,var(--green) 17%,transparent)}h1{font-size:clamp(48px,5.5vw,72px);line-height:1.01;letter-spacing:-.052em;color:var(--ink);font-weight:650;margin:0 0 26px}h1 span{color:var(--violet)}.hero-sub{font-size:18px;line-height:1.62;max-width:570px;margin:0 0 32px}.hero-actions{display:flex;gap:10px;flex-wrap:wrap}.hero-meta{display:flex;gap:17px;margin-top:21px;font-size:12px;color:var(--muted);flex-wrap:wrap}.hero-meta span{display:flex;align-items:center;gap:4px}.hero-meta svg{color:var(--green)}
+.demo-wrap{position:relative;padding:24px 2px 52px}.ambient{position:absolute;border-radius:50%;filter:blur(2px);pointer-events:none}.ambient-one{inset:5% 0 0 5%;background:radial-gradient(circle,color-mix(in srgb,var(--violet) 18%,transparent),transparent 68%)}.ambient-two{width:180px;height:180px;right:-80px;top:0;background:color-mix(in srgb,var(--violet-2) 10%,transparent)}.app-window{position:relative;border:1px solid var(--line);border-radius:18px;background:var(--white);box-shadow:var(--shadow);overflow:hidden;min-height:390px}.window-top{height:48px;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:0 15px;color:var(--muted);font-size:11px}.traffic{display:flex;gap:6px}.traffic i{width:9px;height:9px;border-radius:50%;background:#ff6259}.traffic i:nth-child(2){background:#ffc044}.traffic i:nth-child(3){background:#2dcc51}.window-status{text-align:right}.mail-row{height:44px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:22px;padding:0 22px;font-size:12px}.mail-row span{width:36px;color:var(--muted)}.mail-row strong{font-weight:500;color:var(--ink)}.mail-body{padding:30px 34px;color:var(--ink);font-size:14px;line-height:1.75}.mail-body p{margin:0 0 19px}.typed{opacity:.16;color:var(--muted);border-left:2px solid var(--violet);padding-left:10px;transition:opacity .5s}.typed.visible{opacity:1;color:var(--ink)}.voice-pill{position:absolute;z-index:4;left:50%;bottom:13px;transform:translateX(-50%);width:min(510px,92%);display:flex;align-items:center;gap:12px;padding:11px 12px;border:1px solid color-mix(in srgb,var(--violet) 30%,var(--line));border-radius:16px;background:color-mix(in srgb,var(--white) 95%,transparent);box-shadow:0 15px 40px rgba(43,36,78,.2);backdrop-filter:blur(16px);color:var(--ink);text-align:left;cursor:pointer}.voice-pill:hover{transform:translateX(-50%) translateY(-2px)}.mic-orb{width:39px;height:39px;flex:0 0 auto;display:grid;place-items:center;border-radius:11px;background:var(--violet);color:white}.voice-content{display:flex;flex-direction:column;min-width:125px}.voice-content strong{font-size:12.5px}.voice-content small{font-size:10px;color:var(--muted)}.wave{height:44px;display:flex;align-items:center;gap:2px;flex:1;justify-content:center}.wave i{width:2px;border-radius:2px;background:var(--violet);transition:height .2s}.recording .wave i{animation:pulse .65s ease-in-out infinite alternate}@keyframes pulse{to{transform:scaleY(.45);opacity:.55}}kbd{font-family:var(--mono);font-size:12px;background:var(--surface);border:1px solid var(--line);border-bottom-width:2px;border-radius:7px;padding:5px 9px;color:var(--ink)}
+.trust-strip{padding:22px 0;border-block:1px solid var(--line);background:var(--white)}.trust-inner{display:flex;justify-content:space-between;align-items:center;gap:32px}.trust-inner>span{font-size:12px;color:var(--muted)}.app-list{display:flex;gap:30px;align-items:center;color:var(--muted)}.app-list b{font-size:13px;font-weight:600}
+section:not(.hero,.trust-strip,.cta){padding:110px 0}.section-heading{text-align:center;max-width:700px;margin:0 auto 58px}.section-heading h2,.privacy-copy h2,.cta h2{font-size:clamp(34px,4vw,50px);line-height:1.12;letter-spacing:-.035em;color:var(--ink);margin:0 0 17px;font-weight:650}.section-heading>p:last-child{font-size:17px;margin:0}.features-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.feature-card{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:31px;overflow:hidden;min-height:310px}.feature-large{grid-column:1/-1;display:grid;grid-template-columns:55px 1fr 1.1fr;align-items:start;column-gap:17px;min-height:270px}.feature-large h3{margin-top:8px}.feature-large p{grid-column:2;max-width:470px}.icon-box{width:45px;height:45px;border-radius:12px;background:var(--violet-soft);color:var(--violet);display:grid;place-items:center}.feature-card h3{font-size:20px;letter-spacing:-.02em;color:var(--ink);margin:18px 0 8px}.feature-card p{font-size:14px;color:var(--muted);margin:0;max-width:480px}.speed-viz{grid-column:3;grid-row:1/4;align-self:center;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:13px;color:var(--muted);font-size:11px}.speed-viz b{grid-column:1/-1;text-align:center;color:var(--violet);font-size:12px}.speed-line{height:48px;display:flex;align-items:center;justify-content:center;gap:3px;border-radius:12px;background:var(--surface)}.speed-line i{width:4px;height:17px;background:var(--violet);border-radius:4px}.speed-line i:nth-child(2){height:31px}.mini-apps{display:flex;gap:10px;margin-top:34px}.mini-apps span{width:42px;height:42px;display:grid;place-items:center;border:1px solid var(--line);border-radius:11px;color:var(--ink);font-size:12px;font-weight:700;background:var(--surface)}.history-list{display:flex;flex-direction:column;gap:8px;margin-top:27px}.history-list span{font-size:11px;color:var(--muted);background:var(--surface);padding:9px 11px;border-radius:8px}.history-list i{display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--violet);margin-right:8px}
+.soft-section{background:var(--white);border-block:1px solid var(--line)}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.steps article{position:relative;padding:29px;border:1px solid var(--line);background:var(--paper);border-radius:18px}.step-num{font-family:var(--mono);color:var(--violet);font-size:11px}.steps h3{font-size:18px;color:var(--ink);margin:21px 0 7px}.steps p{font-size:13px;color:var(--muted);margin:0}.key-demo,.talk-demo,.text-demo{height:104px;margin-top:20px;border-radius:12px;background:var(--surface);display:flex;align-items:center;justify-content:center}.key-demo{font-family:var(--mono);font-size:27px;color:var(--ink)}.talk-demo{gap:4px;color:var(--violet)}.talk-demo svg{margin-right:8px}.talk-demo i{width:3px;border-radius:3px;background:var(--violet)}.text-demo{position:relative;font-family:var(--mono);font-size:11px;color:var(--ink)}.text-demo i{width:1px;height:17px;background:var(--violet);margin-left:3px;animation:blink 1s infinite}@keyframes blink{50%{opacity:0}}
+.privacy-grid{display:grid;grid-template-columns:1fr 1fr;gap:90px;align-items:center}.privacy-visual{height:440px;position:relative;display:grid;place-items:center}.privacy-ring{position:absolute;border:1px solid var(--line);border-radius:50%}.ring-outer{width:410px;height:410px}.ring-inner{width:290px;height:290px;border-style:dashed}.mac-core{width:170px;height:170px;border-radius:40px;background:linear-gradient(145deg,var(--violet-2),var(--violet));box-shadow:0 25px 60px color-mix(in srgb,var(--violet) 30%,transparent);color:white;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;z-index:1}.mac-core strong{font-size:15px}.mac-core small{font-size:11px;opacity:.7}.offline-chip{position:absolute;right:8%;top:20%;padding:8px 13px;border-radius:99px;background:var(--white);border:1px solid var(--line);box-shadow:0 8px 30px rgba(20,20,30,.08);font-size:11px;color:var(--green)}.privacy-copy>p:not(.kicker){font-size:17px}.privacy-copy ul{list-style:none;padding:0;margin:31px 0 0;display:flex;flex-direction:column;gap:20px}.privacy-copy li{display:flex;gap:14px;color:var(--violet)}.privacy-copy li span{display:flex;flex-direction:column}.privacy-copy li strong{font-size:14px;color:var(--ink)}.privacy-copy li small{font-size:12px;color:var(--muted);margin-top:2px}
+.cta{padding:44px 0 100px}.cta-card{position:relative;overflow:hidden;text-align:center;padding:79px 24px;border-radius:24px;background:#15131d;color:#d7d3e6}.cta-glow{position:absolute;width:500px;height:350px;top:-250px;left:50%;transform:translateX(-50%);background:var(--violet);filter:blur(100px);opacity:.55}.cta-icon{position:relative;width:58px;height:58px;margin:0 auto 22px;border-radius:17px;display:grid;place-items:center;background:linear-gradient(145deg,#9e90ff,#6956d9);color:#fff}.cta h2{position:relative;color:#fff}.cta p{position:relative;margin:0 0 26px}.button-light{position:relative;background:#fff;color:#17151d}.cta small{position:relative;display:block;margin-top:16px;font-size:11px;color:#777283}footer{padding:36px 0 22px;border-top:1px solid var(--line);background:var(--white)}.footer-inner{display:grid;grid-template-columns:1fr auto 1fr;align-items:center}.footer-inner p{font-size:12px;color:var(--muted)}.footer-inner>div{justify-self:end;display:flex;gap:22px;font-size:12px;color:var(--muted)}.footer-bottom{display:flex;justify-content:space-between;border-top:1px solid var(--line);margin-top:28px;padding-top:18px;font-size:10px;color:var(--muted)}
+@media(max-width:900px){.hero{padding-top:65px}.hero-grid,.privacy-grid{grid-template-columns:1fr;gap:55px}.hero-copy{text-align:center}.hero-sub{margin-left:auto;margin-right:auto}.hero-actions,.hero-meta{justify-content:center}.demo-wrap{max-width:650px;margin:auto;width:100%}.feature-large{grid-template-columns:55px 1fr}.feature-large .speed-viz{grid-column:1/-1;grid-row:auto;margin-top:25px}.privacy-grid{gap:20px}.privacy-copy{max-width:620px;margin:auto}.footer-inner{grid-template-columns:1fr 1fr}.footer-inner p{display:none}.steps{grid-template-columns:1fr}.steps article{display:grid;grid-template-columns:1fr 1.5fr;column-gap:24px}.steps .step-num,.steps h3,.steps p{grid-column:1}.steps h3{margin-top:12px}.steps .key-demo,.steps .talk-demo,.steps .text-demo{grid-column:2;grid-row:1/4;margin:0}}
+@media(max-width:680px){.container{width:min(100% - 30px,1160px)}.nav-links{display:none}.nav-actions .button{display:none}.hero{padding:55px 0 64px}h1{font-size:46px}.hero-sub{font-size:16px}.hero-actions{flex-direction:column}.button-large{width:100%}.app-window{min-height:360px}.mail-body{padding:25px 20px}.voice-pill{width:96%}.wave{display:none}.trust-inner{flex-direction:column;gap:13px}.app-list{gap:16px;flex-wrap:wrap;justify-content:center}section:not(.hero,.trust-strip,.cta){padding:75px 0}.features-grid{grid-template-columns:1fr}.feature-large{grid-column:auto;display:block}.feature-large p{margin-top:0}.speed-viz{margin-top:28px!important}.steps article{display:block}.steps .key-demo,.steps .talk-demo,.steps .text-demo{margin-top:20px}.privacy-visual{height:330px}.ring-outer{width:310px;height:310px}.ring-inner{width:230px;height:230px}.mac-core{width:145px;height:145px;border-radius:34px}.offline-chip{right:0}.cta{padding:20px 0 70px}.cta-card{padding:58px 20px}.footer-inner{display:flex;flex-direction:column;gap:25px}.footer-inner>div{justify-self:auto;flex-wrap:wrap;justify-content:center}.footer-bottom{flex-direction:column;align-items:center;gap:5px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+
+/* Faithful Amelia floating overlay — mirrors RecordingOverlayView.swift */
+.demo-wrap{padding-bottom:76px}
+.voice-pill{bottom:34px;width:min(420px,88%);height:80px;gap:16px;padding:14px 20px;border:1px solid rgba(255,255,255,.14);border-radius:999px;background:color-mix(in srgb,var(--white) 90%,transparent);box-shadow:none;backdrop-filter:blur(22px) saturate(150%);text-align:initial}
+.active-app-icon{width:32px;height:32px;flex:0 0 auto;display:grid;place-items:center;border-radius:7px;background:linear-gradient(150deg,#67b8ff,#1479e9);box-shadow:inset 0 0 0 1px rgba(255,255,255,.25)}
+.mail-envelope{width:20px;height:14px;border:1.8px solid #fff;border-radius:3px;position:relative}
+.mail-envelope:after,.mail-envelope:before{content:"";position:absolute;top:2px;width:12px;height:1.5px;background:#fff}
+.mail-envelope:before{left:0;transform:rotate(34deg)}
+.mail-envelope:after{right:0;transform:rotate(-34deg)}
+.listening-dots{display:flex;align-items:center;gap:8px;padding:0 4px}
+.listening-dots i{width:8px;height:8px;border-radius:50%;background:#8d929a;opacity:.32;transform:scale(.6)}
+.recording .listening-dots i{background:#1ae673;animation:amelia-dot .75s ease-in-out infinite alternate}
+.complete .listening-dots i{background:#f59e0b;opacity:.75;transform:scale(.78)}
+@keyframes amelia-dot{from{opacity:.3;transform:scale(.6)}to{opacity:1;transform:scale(1.2)}}
+.active-app-name{margin-left:auto;padding:8px 14px;border-radius:999px;background:color-mix(in srgb,var(--muted) 15%,transparent);font-size:14px;font-weight:600;color:var(--ink)}
+.cancel-recording{width:25px;height:25px;display:grid;place-items:center;border-radius:50%;background:#ff453a;color:#fff;font-size:17px;line-height:1}
+.demo-hint{position:absolute;z-index:3;bottom:5px;left:50%;transform:translateX(-50%);width:100%;text-align:center;font-size:10px;color:var(--muted);margin:0}
+
+@media(max-width:680px){.voice-pill{width:92%;height:68px;padding:10px 14px;gap:11px}.active-app-name{font-size:12px;padding:7px 11px}.listening-dots{gap:5px}.listening-dots i{width:7px;height:7px}}
+</style></head><body class="__variable_geist_0tvmz3h __variable_geist_mono_1diim1n antialiased"><main><nav aria-label="Navigation principale"><div class="container nav-inner"><a class="brand" href="#top" aria-label="Amelia, accueil"><span class="brand-mark"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v3M8 22h8"></path></svg></span>Amelia</a><div class="nav-links"><a href="#fonctionnalites">Fonctionnalités</a><a href="#fonctionnement">Comment ça marche</a><a href="#confidentialite">Confidentialité</a></div><div class="nav-actions"><button class="theme-btn" aria-label="Changer de thème"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z"></path></svg></button><a class="button button-small button-primary" href="#telecharger">Télécharger</a></div></div></nav><section class="hero" id="top"><div class="container hero-grid"><div class="hero-copy"><div class="eyebrow"><span class="live-dot"></span>100 % local sur votre Mac</div><h1>Votre voix.<br/><span>Directement en texte.</span></h1><p class="hero-sub">Amelia transforme vos paroles en texte fluide dans n’importe quelle application. Rapide, privée et conçue nativement pour Apple Silicon.</p><div class="hero-actions"><a class="button button-primary button-large" href="#telecharger"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16.7 13.4c0-2.5 2.1-3.7 2.2-3.8a4.8 4.8 0 0 0-3.8-2c-1.6-.2-3.1.9-3.9.9-.8 0-2-.9-3.3-.8a4.9 4.9 0 0 0-4.1 2.5c-1.8 3-.5 7.5 1.2 10 .9 1.2 1.9 2.6 3.2 2.5 1.3-.1 1.8-.8 3.4-.8s2 .8 3.4.8c1.4 0 2.3-1.2 3.1-2.5a11 11 0 0 0 1.4-2.9 4.3 4.3 0 0 1-2.8-3.9Z"></path><path d="M14.1 5.9A4.4 4.4 0 0 0 15.2 2a4.5 4.5 0 0 0-3 2 4.2 4.2 0 0 0-1.1 3.8 3.7 3.7 0 0 0 3-1.9Z"></path></svg>Télécharger pour macOS</a><a class="button button-ghost button-large" href="#fonctionnement">Voir comment ça marche <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div><div class="hero-meta"><span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"></path></svg>Sans compte</span><span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"></path></svg>Fonctionne hors ligne</span><span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"></path></svg>macOS 14+</span></div></div><div class="demo-wrap" aria-label="Démonstration interactive d’Amelia"><div class="ambient ambient-one"></div><div class="ambient ambient-two"></div><div class="app-window"><div class="window-top"><div class="traffic"><i></i><i></i><i></i></div><span>Nouvel e-mail</span><span class="window-status">Brouillon</span></div><div class="mail-row"><span>À</span><strong>Équipe produit</strong></div><div class="mail-row"><span>Objet</span><strong>Point sur la nouvelle version</strong></div><div class="mail-body"><p>Bonjour à tous,</p><p class="typed">La nouvelle version est prête pour les derniers tests. Pouvez-vous me partager vos retours avant vendredi ?</p><p>Merci,<br/>Lorry</p></div></div><button class="voice-pill " aria-label="Lancer la démonstration de dictée"><span class="active-app-icon" aria-hidden="true"><span class="mail-envelope"></span></span><span class="listening-dots" aria-hidden="true"><i style="animation-delay:0ms"></i><i style="animation-delay:90ms"></i><i style="animation-delay:180ms"></i><i style="animation-delay:270ms"></i><i style="animation-delay:360ms"></i></span><span class="active-app-name">Mail</span></button><p class="demo-hint">Cliquez sur la barre pour simuler une dictée</p></div></div></section><section class="trust-strip"><div class="container trust-inner"><span>Écrivez partout où vous travaillez</span><div class="app-list"><b>Mail</b><b>Messages</b><b>Safari</b><b>Slack</b><b>VS Code</b><b>Notes</b></div></div></section><section id="fonctionnalites"><div class="container"><div class="section-heading"><p class="kicker">Pensée pour disparaître</p><h2>Parlez. Amelia s’occupe du reste.</h2><p>Une dictée naturelle qui reste discrète et vous laisse concentré sur vos idées.</p></div><div class="features-grid"><article class="feature-card feature-large"><div class="icon-box"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m13 2-9 12h8l-1 8 9-12h-8l1-8Z"></path></svg></div><h3>Rapide comme votre pensée</h3><p>Whisper optimisé par MLX exploite pleinement Apple Silicon pour transcrire en quelques instants.</p><div class="speed-viz"><span>Voix</span><div class="speed-line"><i></i><i></i><i></i></div><span>Texte</span><b>3–5× plus rapide</b></div></article><article class="feature-card"><div class="icon-box"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="2"></rect><rect x="14" y="3" width="7" height="7" rx="2"></rect><rect x="3" y="14" width="7" height="7" rx="2"></rect><rect x="14" y="14" width="7" height="7" rx="2"></rect></svg></div><h3>Partout sur macOS</h3><p>Le texte s’insère à l’endroit exact de votre curseur : Mail, Slack, Xcode, Safari et toutes vos apps.</p><div class="mini-apps"><span>M</span><span>S</span><span>X</span><span>+</span></div></article><article class="feature-card"><div class="icon-box"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"></path><path d="M3 3v5h5M12 7v5l3 2"></path></svg></div><h3>Rien ne se perd</h3><p>Vos 50 dernières transcriptions restent accessibles dans la barre des menus, uniquement sur votre Mac.</p><div class="history-list"><span><i></i>Compte-rendu de la réunion…</span><span><i></i>Peux-tu vérifier la dernière…</span><span><i></i>La nouvelle version est prête…</span></div></article></div></div></section><section id="fonctionnement" class="soft-section"><div class="container"><div class="section-heading"><p class="kicker">Un geste, c’est tout</p><h2>La dictée sans changer vos habitudes.</h2></div><div class="steps"><article><span class="step-num">01</span><div class="key-demo">⌃</div><h3>Maintenez Control</h3><p>Placez le curseur où vous voulez écrire et maintenez votre raccourci.</p></article><article><span class="step-num">02</span><div class="talk-demo"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v3M8 22h8"></path></svg><i style="height:12px"></i><i style="height:22px"></i><i style="height:35px"></i><i style="height:18px"></i><i style="height:28px"></i></div><h3>Parlez naturellement</h3><p>L’overlay discret confirme l’écoute pendant que vous gardez le fil de votre idée.</p></article><article><span class="step-num">03</span><div class="text-demo"><span>Votre texte apparaît</span><i></i></div><h3>Relâchez. C’est écrit.</h3><p>Ponctuation, majuscules et mise en forme sont ajoutées automatiquement.</p></article></div></div></section><section id="confidentialite"><div class="container privacy-grid"><div class="privacy-visual"><div class="privacy-ring ring-outer"></div><div class="privacy-ring ring-inner"></div><div class="mac-core"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg><strong>Votre Mac</strong><small>Tout reste ici</small></div><span class="offline-chip">Aucun cloud</span></div><div class="privacy-copy"><p class="kicker">Privée par conception</p><h2>Votre voix ne quitte jamais votre Mac.</h2><p>Amelia traite l’audio et stocke l’historique localement. Une fois le modèle installé, vous pouvez même couper Internet.</p><ul><li><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"></path><path d="m9 12 2 2 4-4"></path></svg><span><strong>Traitement 100 % local</strong><small>Aucun enregistrement envoyé à un serveur.</small></span></li><li><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"></path><path d="M3 3v5h5M12 7v5l3 2"></path></svg><span><strong>Historique sous votre contrôle</strong><small>Conservé localement, effaçable à tout moment.</small></span></li><li><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg><span><strong>Zéro compte, zéro télémétrie</strong><small>Vos mots restent vos mots.</small></span></li></ul></div></div></section><section class="cta" id="telecharger"><div class="container"><div class="cta-card"><div class="cta-glow"></div><div class="cta-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v3M8 22h8"></path></svg></div><h2>Moins de clavier.<br/>Plus d’idées.</h2><p>Découvrez une façon plus naturelle d’écrire sur votre Mac.</p><a class="button button-light button-large" href="https://github.com/lp460/Amelia" target="_blank" rel="noreferrer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4"></path><path d="M5 21h14"></path></svg>Découvrir Amelia</a><small>Conçue pour Apple Silicon · Installation simple</small></div></div></section><footer><div class="container footer-inner"><a class="brand" href="#top"><span class="brand-mark"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v3M8 22h8"></path></svg></span>Amelia</a><p>La dictée locale qui respecte vos idées.</p><div><a href="https://github.com/lp460/Amelia" target="_blank" rel="noreferrer">GitHub</a><a href="#confidentialite">Confidentialité</a><a href="mailto:support@amelia.app">Support</a></div></div><div class="container footer-bottom"><span>© 2026 Amelia</span><span>Créée avec soin en France</span></div></footer></main><script>
+(function(){
+  const root=document.documentElement;
+  const themeButton=document.querySelector('[aria-label="Changer de thème"]');
+  const saved=localStorage.getItem('amelia-theme');
+  const dark=saved?saved==='dark':matchMedia('(prefers-color-scheme:dark)').matches;
+  root.dataset.theme=dark?'dark':'light';
+  themeButton?.addEventListener('click',()=>{
+    const next=root.dataset.theme!=='dark';
+    root.dataset.theme=next?'dark':'light';
+    localStorage.setItem('amelia-theme',next?'dark':'light');
+  });
+
+  const overlay=document.querySelector('.voice-pill');
+  const typed=document.querySelector('.typed');
+  const hint=document.querySelector('.demo-hint');
+  overlay?.addEventListener('click',()=>{
+    overlay.classList.remove('complete');
+    overlay.classList.add('recording');
+    typed?.classList.remove('visible');
+    if(hint) hint.textContent='Amelia vous écoute…';
+    setTimeout(()=>{
+      overlay.classList.remove('recording');
+      overlay.classList.add('complete');
+      typed?.classList.add('visible');
+      if(hint) hint.textContent='Transcription insérée dans Mail';
+    },1800);
+  });
+})();
+</script></body></html>
